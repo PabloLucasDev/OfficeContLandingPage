@@ -26,16 +26,19 @@ header {
   justify-content: space-between;
   padding: 20px 50px;
   z-index: 10;
+  flex-wrap: wrap;
 }
 
 .logo img {
-  min-width: 200px;
+  width: 100%;
+  min-width: 150px;
+  height: 50px;
   max-width: 320px;
-  margin: 6% -10%;
+  margin: 6% 6%;
 }
 
 header nav {
-  margin-right: 12%;
+
   margin-top: -1%;
 }
 
@@ -43,7 +46,7 @@ header nav ul {
   display: flex;
   gap: 1em;
   list-style: none;
- 
+
 }
 
 
@@ -80,7 +83,7 @@ header nav ul li a:hover::after {
 
 a.areaDoCliente {
   padding: 10px 30px;
-  min-width:200px;
+  min-width: 200px;
   margin-top: -1%;
   border-radius: 5px;
   border: 2px solid var(--blue-light);
@@ -97,13 +100,35 @@ a.areaDoCliente:hover {
   color: #ffffff;
 }
 
+.hamburguer {
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid #fff;
+  cursor: pointer;
+
+}
+
+.hamburguer::before,
+.hamburguer::after {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin-top: 5px;
+}
+
+/* Section Banner */
+
 section#banner {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   background: url('./assets/imgs/Section-Banner.png') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   align-items: center;
-  padding: 0 125px;
+  padding: 0 70px;
   color: white;
 }
 
@@ -168,7 +193,8 @@ section#banner {
 
 #aboutUs {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -397,7 +423,8 @@ section#banner {
   text-align: center;
   padding: 60px 20px;
   background-color: #f9f9f9;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 }
 
 .section-services__subtitle {
@@ -430,13 +457,15 @@ section#banner {
   padding: 20px;
   width: 100%;
   max-width: 360px;
+  height: 100%;
+  max-height: 380px;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: space-between;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
+
   gap: 30px;
 }
 
@@ -619,8 +648,6 @@ section#banner {
   z-index: 2;
 }
 
-
-
 .section-clients::before {
   left: 0;
   background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
@@ -643,8 +670,12 @@ section#banner {
 
 .section-clients__logo-slide img {
   margin: 0px 40px;
-  height: 100px;
+  height: 140px;
+  width: 260px;
+  object-fit: cover;
 }
+
+
 
 /* Section Magazines */
 
@@ -652,7 +683,8 @@ section#banner {
   padding: 60px 20px;
   background-color: #f9f9f9;
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 }
 
 .section-magazines__title {
@@ -750,7 +782,8 @@ section#banner {
   justify-content: center;
   padding: 60px 20px;
   background: url('./assets/imgs/Section-AboutUs.png');
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 }
 
 .section-form__container {
@@ -825,7 +858,7 @@ section#banner {
   min-height: 500px;
 }
 
-.section-form__form{
+.section-form__form {
   display: flex;
   flex-direction: column;
 }
@@ -835,7 +868,7 @@ section#banner {
   font-weight: 500;
   color: #000000;
   margin-bottom: 10px;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .section-form__form p {
@@ -858,7 +891,7 @@ section#banner {
   outline: none;
   transition: all 0.3s ease;
   background: #D9D9D9;
-  color:#000000;
+  color: #000000;
 }
 
 .section-form__form input:focus {
@@ -877,7 +910,7 @@ section#banner {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 
@@ -887,7 +920,7 @@ section#banner {
 
 /* Footer */
 .footer {
-  background:url('./assets/imgs/Fundo-Footer.png') no-repeat bottom center;
+  background: url('./assets/imgs/Fundo-Footer.png') no-repeat bottom center;
   background-size: cover;
   color: #FFFFFF;
   padding: 40px 20px;
@@ -911,8 +944,8 @@ section#banner {
 .footer__logo img {
   width: 100%;
   height: 100%;
-  max-width: 250px;
-  max-height: 150px;
+  max-width: 300px;
+  max-height: 200px;
   margin-bottom: 10px;
 }
 
@@ -924,7 +957,7 @@ section#banner {
 
 .footer__title {
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 15px;
   color: #FFFFFF;
 }
@@ -952,10 +985,12 @@ section#banner {
   display: flex;
   gap: 10px;
   margin-bottom: 15px;
+  filter: brightness(0) invert(1);
+
 }
 
 .footer__socials a img {
-  width: 24px;
+  width: 30px;
   transition: transform 0.3s ease;
 }
 
@@ -983,7 +1018,8 @@ section#banner {
 
 .footer__bottom a {
   color: #CFCFCF;
-  text-decoration: none;
+  text-decoration: underline;
+  padding: 5px 0px;
   transition: color 0.3s ease;
 }
 
@@ -993,4 +1029,83 @@ section#banner {
 
 .footer__terms span {
   margin: 0 10px;
+}
+
+@media (max-width:750px) {
+  .hamburguer {
+    position: absolute;
+    display: block;
+    z-index: 10;
+  }
+
+  header nav ul {
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    background: #000000;
+    clip-path: circle(100px at 90% -20%);
+    transition: 1s ease-out;
+    gap: 0;
+    pointer-events: none;
+  }
+
+  header nav ul.active {
+    clip-path: circle(1500px at 90% -20%);
+    pointer-events: all;
+
+  }
+
+  header nav ul li a {
+    color: var(--blue-light);
+
+  }
+
+  a.areaDoCliente {
+    display: none;
+  }
+
+  .section-banner__title {
+    font-size: 1.5em;
+    margin-block: 10%;
+  }
+
+  .section-banner__cta,
+  .section-banner__meetServices {
+    padding: 10px 35px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .section-about-us__title {
+    font-size: 1.50em;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .section-about-us__blueBackground {
+    flex-direction: column;
+
+  }
+
+  #aboutUs {
+    padding: 0px 0px;
+  }
+
+  .section-app__title {
+    font-size: 1.5rem;
+  }
+
+  
 }
