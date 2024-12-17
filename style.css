@@ -205,7 +205,7 @@ section#banner {
 
 .section-about-us__blueBackground {
   width: 110%;
-  height: 80%;
+  height: 100%;
   background-color: #eef2fc;
   border-radius: 15px;
   display: flex;
@@ -229,7 +229,7 @@ section#banner {
   border-radius: 15px;
   position: absolute;
   left: -50px;
-  top: 0px;
+  top: -150px;
 }
 
 .section-about-us__blockText {
@@ -1036,6 +1036,15 @@ section#banner {
     position: absolute;
     display: block;
     z-index: 10;
+    margin-top: -4.5%;
+  }
+
+  .logo img {
+    width: 100%;
+    min-width: 100px;
+    max-width: 200px;
+    height: 40px;
+    margin: 15% 6%;
   }
 
   header nav ul {
@@ -1077,7 +1086,7 @@ section#banner {
 
   .section-banner__cta,
   .section-banner__meetServices {
-    padding: 10px 35px;
+    padding: 6px 30px;
     font-size: 14px;
     border-radius: 5px;
     text-decoration: none;
@@ -1096,16 +1105,33 @@ section#banner {
 
   .section-about-us__blueBackground {
     flex-direction: column;
-
+    width: 100%;
   }
 
   #aboutUs {
     padding: 0px 0px;
   }
 
+  /* Section App Mobile */
+
   .section-app__title {
     font-size: 1.5rem;
   }
 
-  
+  .section-app__image img {
+    max-width: 150px;
+    border-radius: 10px;
+    min-height: 250px;
+    height: 100%;
+  }
+
+  .section-app__qr-code img {
+    margin: 0;
+  }
+
+  /* Section Form Mobile */
+
+  .section-form__container{
+    flex-direction: column;
+  }
 }
