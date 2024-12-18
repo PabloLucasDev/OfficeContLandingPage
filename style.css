@@ -947,6 +947,7 @@ section#banner {
   max-width: 300px;
   max-height: 200px;
   margin-bottom: 10px;
+  filter: brightness(0) invert(1);
 }
 
 .footer__description {
@@ -1134,4 +1135,18 @@ section#banner {
   .section-form__container{
     flex-direction: column;
   }
+}
+
+/* Scroll animation */
+
+.js .js-scroll{
+  opacity: 0;
+  transform: translate3d(0,30px ,0);
+  transition: .3s;
+}
+
+.js .js-scroll.ativo{
+  opacity: 1;
+  transition: .3s;
+  transform: translate3d(0,0 ,0);
 }
