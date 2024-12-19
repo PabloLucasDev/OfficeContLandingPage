@@ -1041,7 +1041,7 @@ section#banner {
 }
 
 .footer__bottom a {
-  color: var(--blue-light);
+  color:unset;
   text-decoration: none;
 }
 
@@ -1168,6 +1168,18 @@ section#banner {
     height: 100%;
   }
 }
+
+@media(min-width:1300px ){
+  .section-app__image img{
+    margin-inline-start: 20vw;
+  }
+
+  .section-app__text{
+    margin-inline-end: 20vw;
+  }
+}
+
+
 
 /* Scroll animation */
 
