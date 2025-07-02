@@ -18,8 +18,8 @@
     <nav>
       <button class="hamburguer"></button>
       <ul>
-        <li><a href="wa.link/yzxgn0"">Abrir CNPJ</a></li>
-        <li><a href=" #form">Trocar de Contador</a></li>
+        <li><a href="https://wa.me/81281581?text=Olá,%20desejo%20abrir%20meu%20cnpj">Abrir CNPJ</a></li>
+        <li><a href="#form">Trocar de Contador</a></li>
         <li><a href="#services">Serviços</a></li>
         <li><a href="#aboutUs">Contato</a></li>
       </ul>
@@ -31,7 +31,7 @@
       <h1 class="section-banner__title">Soluções integradas para <span class="section-banner__span-emphasis">transformar</span> a gestão do seu negócio.</h1>
       <p class="section-banner__description">Descomplique a gestão contábil da sua empresa e foque no que realmente importa: o crescimento do seu negócio.</p>
       <div class="section-banner__buttons">
-        <a href="wa.link/yzxgn0"" class=" section-banner__cta" target="_blank">Abrir CNPJ</a>
+        <a href="https://wa.me/81281581?text=Olá,%20desejo%20abrir%20meu%20cnpj" class=" section-banner__cta" target="_blank">Abrir CNPJ</a>
         <a href="#services" class="section-banner__meetServices">Conheça nossos serviços</a>
       </div>
     </div>
@@ -99,19 +99,19 @@
           Gestão fiscal, trabalhista e societária integrada para simplificar processos e impulsionar o seu negócio.
         </p>
         <div class="section-services__card-action">
-          <a href="#" class="section-services__button">Ler Mais</a>
+          <a class="section-services__button" data-service-title="Contabilidade" data-service-description="A contabilidade digital usa tecnologia para simplificar e melhorar processos contábeis, substituindo documentos físicos por softwares e ferramentas online. Isso agiliza tarefas, reduz erros e oferece uma visão mais clara das finanças de sua empresa. Em resumo, é uma abordagem mais eficiente e precisa para gerenciar registros financeiros.">Ler Mais</a>
         </div>
       </div>
       <div class="section-services__card">
         <div class="section-services__icon">
           <img src="./assets/icons/Chart-Line-Up-Icon.svg" alt="Ícone de BPO Financeiro">
         </div>
-        <h4 class="section-services__card-title">Bpo Financeiro</h4>
+        <h4 class="section-services__card-title">BPO Financeiro</h4>
         <p class="section-services__card-description">
           Gestão financeira completa: controle de contas, fluxo de caixa e relatórios para otimizar seus resultados.
         </p>
         <div class="section-services__card-action">
-          <a href="#" class="section-services__button">Ler Mais</a>
+          <a class="section-services__button" data-service-title="Bpo Financeiro" data-service-description="O BPO Financeiro é uma solução abrangente para a gestão financeira terceirizada de empresas. Com uma plataforma integrada e serviços especializados, o nosso BPO Financeiro oferece suporte em diversas áreas, como contas a pagas e receber, controle de despesas, processamento de pagamentos e relatórios financeiros. Nossa equipe altamente qualificada e expertise em compliance fiscal garantem conformidade com as regulamentações, proporcionando segurança e tranquilidade aos nossos clientes.">Ler Mais</a>
         </div>
       </div>
       <div class="section-services__card">
@@ -123,11 +123,20 @@
           Planejamos e executamos mudanças estratégicas para fortalecer a estrutura e o crescimento da sua empresa.
         </p>
         <div class="section-services__card-action">
-          <a href="#" class="section-services__button">Ler Mais</a>
+          <a class="section-services__button" data-service-title="Reestruturação Societária" data-service-description="Reorganizamos a estrutura da sua empresa para melhorar sua eficiência e impulsionar o crescimento. Esse processo estratégico é ideal para quem busca adaptar-se a novos desafios ou expandir de forma sustentável.">Ler Mais</a>
         </div>
       </div>
     </div>
   </section>
+
+  <div class="modal" id="serviceModal">
+    <div class="modal-content">
+      <div class="modal-header" id="modalTitle"></div>
+      <div class="modal-body" id="modalDescription"></div>
+      <button class="modal-close" id="modalClose">Fechar</button>
+    </div>
+  </div>
+
 
   <section id="clients" class="section-clients js-scroll">
     <h1 class="section-clients__title">Empresas que confiam na <span>OFFICE CONT</span></h1>
@@ -149,14 +158,14 @@
       <h1 class="section-ebooks__title">Nossos Ebooks</h1>
       <div class="section-ebooks__content">
         <figure class="section-ebooks__image">
-          <img src="./assets/imgs/Ebook-GuiadoEmpreendedor.png" alt="Capa do Ebook Guia do Empreendedor Produtivo">
+          <img src="./assets/imgs/Ebook-GuiadoEmpreendedor.jpg" alt="Capa do Ebook Guia do Empreendedor Produtivo">
         </figure>
         <div class="section-ebooks__text">
           <h2 class="section-ebooks__subtitle">Guia do Empreendedor Produtivo</h2>
           <p class="section-ebooks__description">
             Mais que um ebook, é uma ferramenta prática para transformar sua rotina, otimizar resultados e alcançar objetivos, com insights e estratégias para empreendedores que buscam unir produtividade e qualidade.
           </p>
-          <a href="#" class="section-ebooks__button">Adquirir agora</a>
+          <a href="./assets/docs/ebook OFICE CONT 01.pdf" download="./assets/docs/ebook OFICE CONT 01.pdf" class="section-ebooks__button">Adquirir agora</a>
         </div>
       </div>
     </div>
@@ -280,7 +289,7 @@
         <h4 class="footer__title">Entre em contato</h4>
         <p> (81) 98128-1581</p>
         <p> (81) 98873-5686</p>
-        <p><strong>Email:</strong> <a href="mailto:deivid@officecont.cnt.br">deivid@officecont.cnt.br</a></p>
+        <p><strong>Email:</strong> <a href="mailto:contato@officecont.cnt.br">contato@officecont.cnt.br</a></p>
       </div>
     </div>
 
@@ -295,7 +304,14 @@
   </div>
   </footer>
 
-
+<div class="corner-tab">
+    <div class="iframe-container">
+      <iframe style="border-radius:12px"
+        src="https://podcast.myofficecont.com.br/" width="100%" height="352px"
+        frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+</div>
 
 </body>
 

@@ -267,12 +267,14 @@ section#banner {
 
 .section-about-us__contactUs,
 .section-about-us__meetUs {
-  padding: 15px 30px;
+  padding: 15px 3px;
   font-size: 1rem;
   border-radius: 5px;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
 }
 
 .section-about-us__contactUs {
@@ -524,10 +526,69 @@ section#banner {
   text-decoration: none;
   border-radius: 30px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .section-services__button:hover {
   background-color: var(--blue-medium);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.modal-body {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.modal-close {
+  display: inline-block;
+  background: #0B6CDB;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.modal-close:hover {
+  background: #1381ff;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 /* Section Clients */
@@ -595,8 +656,14 @@ section#banner {
   justify-content: center;
 }
 
+.section-ebooks__image {
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+}
+
 .section-ebooks__image img {
-  max-width: 300px;
+  width: 100%;
   border-radius: 5px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
@@ -699,7 +766,6 @@ section#banner {
   padding: 60px 20px;
   background-color: #f9f9f9;
   text-align: center;
-  min-height: 100vh;
   height: auto;
 }
 
@@ -865,7 +931,7 @@ section#banner {
   display: flex;
   justify-content: center;
   flex: 1;
-  background: #D9D9D9;
+  background: #fefcfc;
   border: 1px solid #000000;
   padding: 20px 30px;
   border-radius: 10px;
@@ -906,7 +972,7 @@ section#banner {
   border-radius: 5px;
   outline: none;
   transition: all 0.3s ease;
-  background: #D9D9D9;
+  background: #fefcfc;
   color: #000000;
 }
 
@@ -935,7 +1001,7 @@ section#banner {
 }
 
 .footer {
-  background:url('./assets/imgs/Fundo-Footer.png') center bottom no-repeat;
+  background: url('./assets/imgs/Fundo-Footer.png') center bottom no-repeat;
   background-size: cover;
   color: #FFFFFF;
   padding: 40px 20px;
@@ -968,9 +1034,9 @@ section#banner {
   position: relative;
 }
 
-.footer__logo img{
+.footer__logo img {
   max-width: 250px;
-  position:relative;
+  position: relative;
   left: -50px;
   bottom: 0;
 }
@@ -981,7 +1047,7 @@ section#banner {
   max-width: 350px;
 }
 
-.footer__description span{
+.footer__description span {
   color: #E0E0E0;
 }
 
@@ -992,21 +1058,24 @@ section#banner {
   color: #E0E0E0;
 }
 
-.footer__column a{
+.footer__column a {
   color: #E0E0E0;
 }
 
-.footer__links, .footer__locations {
+.footer__links,
+.footer__locations {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer__links li, .footer__locations li {
+.footer__links li,
+.footer__locations li {
   margin-bottom: 8px;
 }
 
-.footer__links a, .footer__locations a {
+.footer__links a,
+.footer__locations a {
   color: #CFCFCF;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -1025,10 +1094,10 @@ section#banner {
 
 .footer__socials a:hover {
   transform: scale(1.1);
- 
+
 }
 
-.footer__socials a:hover img{
+.footer__socials a:hover img {
   fill: #1381ff;
 }
 
@@ -1041,7 +1110,7 @@ section#banner {
 }
 
 .footer__bottom a {
-  color:unset;
+  color: unset;
   text-decoration: none;
 }
 
@@ -1155,7 +1224,7 @@ section#banner {
     flex-direction: column;
   }
 
-  .footer__column:nth-child(1){
+  .footer__column:nth-child(1) {
     margin-left: 0px;
   }
 }
@@ -1169,12 +1238,12 @@ section#banner {
   }
 }
 
-@media(min-width:1300px ){
-  .section-app__image img{
+@media(min-width:1300px) {
+  .section-app__image img {
     margin-inline-start: 20vw;
   }
 
-  .section-app__text{
+  .section-app__text {
     margin-inline-end: 20vw;
   }
 }
@@ -1193,4 +1262,71 @@ section#banner {
   opacity: 1;
   transition: .3s;
   transform: translate3d(0, 0, 0);
+}
+
+/* Iframe podcast */
+
+.corner-tab {
+  position: fixed;
+  top: 20%;
+  /* Ajustado para um pouco abaixo do topo */
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background-image: url('./assets/imgs/iconeIobSpotify.jpeg');
+  /* Substitua pelo caminho da sua imagem */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 0px 0px 10px;
+  transition: width 0.3s, height 0.3s;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.corner-tab:hover {
+  width: 300px;
+  height: 500px;
+  background-image: none;
+  /* Remove a imagem ao expandir */
+}
+
+.corner-tab .iframe-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.corner-tab:hover .iframe-container {
+  opacity: 1;
+}
+
+.corner-tab .iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+.corner-tab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 70%;
+  /* Substitua pelo caminho da sua imagem */
+  background-size: cover;
+  background-position: center;
+  z-index: 5;
+  transition: opacity 0.3s;
+}
+
+.corner-tab:hover::before {
+  opacity: 0;
 }
